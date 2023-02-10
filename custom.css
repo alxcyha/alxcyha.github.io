@@ -103,3 +103,16 @@ nav ul li a:hover::after{
     cursor: pointer;
     position: relative;
 }
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #eba585;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transform: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
