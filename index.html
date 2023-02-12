@@ -14,13 +14,15 @@
     <div class="container">
         <nav>
             <img src="images/logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contacts</a></li>
                 <li><a href="#">Portfolio</a></li>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>2nd Year BSIT Student</p>
@@ -124,13 +126,12 @@
     <div class="container">
         <div class="contact-left"></div>
         <h1 class="sub-title">Contact Information</h1>
-        <p>villaflor.aliciamargaret@gmail.com</p>
-        <p>09563646000</p>
+        <p><i class="fa-solid fa-envelope"></i>villaflor.aliciamargaret@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>09563646000</p>
         <div class="social-icons">
             <a href="https://www.facebook.com/alxcyha/"><i class="fa-brands fa-square-facebook"></i></a>
             <a href="https://www.instagram.com/alxcyha"><i class="fa-brands fa-square-instagram"></i></a>
         </div>
-        <div class="contact-right"></div>
     </div>
 </div>
 <script>
@@ -147,6 +148,16 @@
         event.currentTarget.classList.add("active-link");
         document.getElementsById(tabname).classList.add("active-tab");
         
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
     }
 </script>
 </body>
