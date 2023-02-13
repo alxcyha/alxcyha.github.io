@@ -69,66 +69,43 @@ nav ul li a:hover::after{
 #about{
     padding: 80px 0;
     color: #424d55;
+    margin-left: 20px;
 }
 .row{
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     flex-wrap: wrap;
 }
 .about-col-1{
-    flex-basis: 35%;
+    flex-basis: 40%;
 }
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
+    margin-left: -40px;
 }
 .about.col-2{
-    flex-basis: 60%;
+    flex-basis: 55%;
 }
 .subtitle{
-    font-size: 60px;
+    font-size: 70px;
     font-weight: 600;
     color:#424d55;
     
 }
-.tab-titles{
-    display: flex;
-    margin: 20px 0 40;
+.about.col-2 h2{
+    margin-right: 60px;
+    margin-top: 20px;
+    font-size: 19px;
+    font-weight: 600;
 }
-.tab-links{
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
+
+.about.col-2 p{
+    list-style-type:none;
+    margin: 50px 0;
 }
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #eba585;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transform: 0.5s;
-}
-.tab-links.active-link::after{
-    width: 50%;
-}
-.tab-contents ul li{
-    list-style-type: none;
-    margin: 10px 0;
-}
-.tab-contents ul li span{
-    color:#eba585;
-    font-size: 14px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
+
+
 /* my works */
 #works{
     padding:30px 0;
@@ -234,20 +211,6 @@ nav ul li a:hover::after{
 .work:hover .layer{
     height: 100%;
 }
-.btn{
-    display: block;
-    margin:50px auto;
-    width: fit-content;
-    border: 1px solid #ddb6b3;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color:#424d55;
-    transition: background 0.5s;
-}
-.btn:hover{
-    background: darkseagreen;
-}
 /* contacts */
 .social-icons{
     margin-top: 5px;
@@ -264,7 +227,7 @@ nav ul li a:hover::after{
     transform: translateY(-5px);
 }
 /* css for smaller screen */
-nav .fas{
+nav .fa-solid{
     display: none;
 }
 @media only screen and (max-width: 600px){
@@ -272,18 +235,17 @@ nav .fas{
         background-image: url(images/bg\ 600.png);
     }
     .header-text{
-       
-        font-size: 20px;
+        font-size: 24px;
     }
     .header-text h1{
         font-size: 60px;
     }
-    nav .fas{
+    nav .fa-solid{
         display: block;
         font-size: 25px;
     }
     nav ul{
-        background: #fff5ed;
+        background:#fff5ed;
         position: fixed;
         top:0;
         right: -200px;
@@ -291,15 +253,36 @@ nav .fas{
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
+        transition: right 0.5s;
     }
     nav ul li{
         display: block;
         margin: 25px;
     }
-    nav ul .fas{
+    nav ul .fa-solid{
         position: absolute;
         top: 25px;
         left:25px;
         cursor: pointer;
     }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col-1,.about.col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1 img{
+        margin-left: auto;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about.col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    
 }

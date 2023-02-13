@@ -16,17 +16,17 @@
             <img src="images/logo.png" class="logo">
             <ul id="sidemenu">
                 <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contacts</a></li>
-                <li><a href="#">Portfolio</a></li>
+                <li><a href="#abouts">About</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>2nd Year BSIT Student</p>
+            <p>Greetings!</p>
             <h1>I am <span> Alicia</span> Villaflor,</h1>
+            <p> 2nd Year Bachelor of Science in Information Technology Student at <span style=font-weight:600>USTP</span> CDO</p>
+            <a href="#abouts">Learn more about me</a>
         </div>
     </div>
 </div>
@@ -38,27 +38,16 @@
             <div class="about-col-1">
                 <img src="images/alicia.jpg">
             </div>    
-            <div class="about-col-2">
+            <div class="about-col-2" id="abouts">
                 <h1 class="subtitle"> About Alicia </h1>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
-                    <p class="tab-links" onclick="opentab('education')"> Education </p>
-                </div>
-
-                
-                <div class="tab-contents active-tab" id="skills"></p>
-                    <ul>
-                        <li><span>Video Editing</span><br>editing short clips and reels</li>
-                        <li><span>Layout</span><br>editing photos for quotes and covers</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2021-present</span><br>University of Science and technology of Southern Philippines</li>
-                        <li><span>2015-2021</span><br>Gusa Regional Science Highschool - X</li>
-                        <li><span>2009-2015</span><br>Del Mar S.D.A. Elementary School</li>
-                    </ul>
-                </div>
+                <p style="font-size: 20px;">AKA <span styleLish, Born and Raised in Cagayan de Oro city<br>20 years old</p>
+                <h2 class="tab-links" > Skills </h2>
+                <p><span style="color: darkseagreen; font-weight: 600;" >Video Editing</span><br>editing short clips and reels</p>
+                <p><span style="color: darkseagreen; font-weight: 600;">Layout</span><br>editing photos for quotes and covers</p>
+                <h2 class="tab-links" > Education </h2>
+                <p><span style="color: darkseagreen; font-weight: 600;">2021-present</span><br>University of Science and technology of Southern Philippines</p>
+                <p><span style="color: darkseagreen; font-weight: 600;">2015-2021</span><br>Gusa Regional Science Highschool - X</p>
+                <p><span style="color: darkseagreen; font-weight: 600;">2009-2015</span><br>Del Mar S.D.A. Elementary School</p>
             </div>
         </div>
     </div>
@@ -72,19 +61,19 @@
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
                 <h2>Layouting</h2>
                 <p>layout created through canva and other editing applications</p>
-                <a href="#">Learn more</a>
+                <a href="https://www.facebook.com/bayabas.prods/">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-film"></i>
                 <h2>Video Editing</h2>
                 <p>edited clips from photos and videos and then uploaded it to reels for content</p>
-                <a href="#">Learn more</a>
+                <a href="https://www.facebook.com/reel/586574096226019">Learn more</a>
             </div>
             <div>
                 <i class="fa-brands fa-twitch"></i>
                 <h2>Streaming</h2>
                 <p>during my free time I tend to stream my progress on games</p>
-                <a href="#">Learn more</a>
+                <a href="https://twitch.tv/aliarareed">Learn more</a>
             </div>
         </div>
     </div>
@@ -102,23 +91,22 @@
             </div>
         </div>
         <div class="work">
-            <img src="images/Verse of the Day.png">
+            <img src="images/reels.png">
             <div class="layer">
-                <h3>Bayabas Productions</h3>
-                <p>The content on this FB page is mostly edited by me.</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <h3>Video Editing</h3>
+                <p>Usually for reels and clips for tiktok content</p>
+                <a href="https://www.facebook.com/reel/586574096226019"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
         </div>
         <div class="work">
-            <img src="images/Verse of the Day.png">
+            <img src="images/twitch.png">
             <div class="layer">
-                <h3>Bayabas Productions</h3>
-                <p>The content on this FB page is mostly edited by me.</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <h3>Streaming Assets</h3>
+                <p>Assets used on streams are customized</p>
+                <a href="http://twitch.tv/aliarareed"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
         </div>
     </div>
-    <a hre="#" class="btn">See More</a>
 </div>
 </div>
 <!-- contact -->
@@ -134,22 +122,6 @@
         </div>
     </div>
 </div>
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementsById(tabname).classList.add("active-tab");
-        
-    }
-</script>
 
 <script>
     var sidemenu = document.getElementById("sidemenu");
